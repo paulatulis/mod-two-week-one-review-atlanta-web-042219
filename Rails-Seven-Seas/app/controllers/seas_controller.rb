@@ -1,7 +1,23 @@
 class SeasController < ApplicationController
   #define your controller actions here
+  def index
+    @seas = Sea.all
+  end
 
+  def show
+    @sea = Sea.find(params[:id])
+  end
 
+  def edit
+    @sea = Sea.find(params[:id])
+  end
+
+  def new
+    @sea = Sea.new
+  end
+
+  def create
+  end 
   private
   # In controller actions, use this private method to access sea params from forms.
   # Example: @sea.update(sea_params)
